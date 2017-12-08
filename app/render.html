@@ -1,0 +1,47 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>HTML Adaptive Card Rendering</title>
+    <style type="text/css">
+      body {
+        margin: 10px;
+      }
+
+      h1 {
+        font-size: 15px;
+        margin: 0;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      #container {
+        align-items: center;
+        justify-content: space-between;
+        border: 2px solid #000;
+        margin-top: 10px;
+        min-width: 300px;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+    -->
+    <script src="scripts/adaptivecards.js"></script>
+    <script src="scripts/adaptivecardsrenderer.js"></script>
+  </head>
+
+  <body>
+    <div id="container"></div>
+    <p style="display: none;"><small><a id="url"></a></small></p>
+  </body>
+</html>
