@@ -116,7 +116,7 @@ gulp.task('size', () => {
 
 gulp.task('copyac', () => {
   gulp.src('./node_modules/adaptivecards/dist/adaptivecards.js')
-    .pipe(gulp.dest('app/scripts'));
+    .pipe(gulp.dest('app'));
 });
 
 gulp.task('wiredep', () => {
